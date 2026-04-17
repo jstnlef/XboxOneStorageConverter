@@ -25,6 +25,12 @@ This tool scans external physical disks on macOS with `diskutil`, reads sector 0
 dotnet build "XBOX One Drive Converter.sln"
 ```
 
+Publish a standalone macOS executable:
+
+```bash
+./scripts/publish-macos.sh
+```
+
 ## Usage
 
 List eligible external disks:
@@ -49,6 +55,12 @@ Switch a disk back to Xbox mode:
 
 ```bash
 sudo dotnet run --project src/XboxOneStorageConverter.Cli -- set-mode disk4 xbox
+```
+
+Run the published executable directly:
+
+```bash
+sudo ./src/XboxOneStorageConverter.Cli/bin/Release/net10.0/osx-x64/publish/xbox-storage-converter scan
 ```
 
 ## Important Notes
